@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "synthetic_demo_only": false,
+    "schema_version": "0.2.0",
+    "notice": "Observed values require captured UI evidence; mappings remain human-reviewable."
+  },
+  "parameters": [
+    {
+      "id": "power_rate_limit_gradient_increase",
+      "label": "Power rate limit gradient (increase)",
+      "data_type": "number",
+      "unit": "% rated power/min",
+      "aliases": ["WGra increase", "ramp rate increase"],
+      "interface_assessability": "app_setting_if_exposed"
+    },
+    {
+      "id": "power_rate_limit_gradient_decrease",
+      "label": "Power rate limit gradient (decrease)",
+      "data_type": "number",
+      "unit": "% rated power/min",
+      "aliases": ["WGra decrease", "ramp rate decrease"],
+      "interface_assessability": "app_setting_if_exposed"
+    },
+    {
+      "id": "volt_watt_vw1",
+      "label": "Volt-watt VW1 voltage",
+      "data_type": "number",
+      "unit": "V",
+      "aliases": ["VW1"],
+      "interface_assessability": "app_setting_if_exposed"
+    },
+    {
+      "id": "volt_watt_vw2",
+      "label": "Volt-watt VW2 voltage",
+      "data_type": "number",
+      "unit": "V",
+      "aliases": ["VW2", "volt watt point 2"],
+      "interface_assessability": "app_setting_if_exposed"
+    },
+    {
+      "id": "volt_var_vv1",
+      "label": "Volt-var VV1 voltage",
+      "data_type": "number",
+      "unit": "V",
+      "aliases": ["VV1"],
+      "interface_assessability": "app_setting_if_exposed"
+    },
+    {
+      "id": "volt_var_vv2",
+      "label": "Volt-var VV2 voltage",
+      "data_type": "number",
+      "unit": "V",
+      "aliases": ["VV2", "volt var point 2"],
+      "interface_assessability": "app_setting_if_exposed"
+    },
+    {
+      "id": "volt_var_vv3",
+      "label": "Volt-var VV3 voltage",
+      "data_type": "number",
+      "unit": "V",
+      "aliases": ["VV3", "volt var point 3"],
+      "interface_assessability": "app_setting_if_exposed"
+    },
+    {
+      "id": "volt_var_vv4",
+      "label": "Volt-var VV4 voltage",
+      "data_type": "number",
+      "unit": "V",
+      "aliases": ["VV4", "volt var point 4"],
+      "interface_assessability": "app_setting_if_exposed"
+    },
+    {
+      "id": "upper_connection_reconnection_frequency",
+      "label": "Upper connection and reconnection frequency",
+      "data_type": "number",
+      "unit": "Hz",
+      "aliases": ["fURF"],
+      "interface_assessability": "app_setting_if_exposed"
+    },
+    {
+      "id": "voltage_disturbance_response",
+      "label": "Voltage disturbance response",
+      "data_type": "evidence_reference",
+      "unit": "type-test evidence",
+      "aliases": [],
+      "interface_assessability": "not_assessable_from_app_settings"
+    }
+  ]
+}

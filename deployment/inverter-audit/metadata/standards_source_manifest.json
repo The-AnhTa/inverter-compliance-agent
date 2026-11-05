@@ -1,0 +1,23 @@
+{
+  "generated_on": "2026-10-29",
+  "source_location": "external laptop standards directory; not copied to Git or VM",
+  "algorithm": "SHA-256",
+  "documents": [
+    {
+      "filename": "ASNZS 4777.2.2020.pdf",
+      "bytes": 2727090,
+      "sha256": "F45AB81CADE3BFD15BD48643D2EC2CE731F980D27DD3DE523E969F513D67F102"
+    },
+    {
+      "filename": "ASNZS 4777.2.2020-2021.pdf",
+      "bytes": 832336,
+      "sha256": "A8E85CA1056ED22B6B4AC701BB941D51ABC6B0D015FE2AD919488FD593434DD7"
+    },
+    {
+      "filename": "ASNZS 4777.2.2020-2024.pdf",
+      "bytes": 1543751,
+      "sha256": "4D7DF341B9B989AABB7951064C5BC165FC635CC297AB2FCE1536B7FFCA80C3E3"
+    }
+  ]
+}
+

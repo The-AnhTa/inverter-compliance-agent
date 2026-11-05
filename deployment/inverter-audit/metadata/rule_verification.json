@@ -1,0 +1,41 @@
+{
+  "verified_on": "2026-10-29",
+  "method": "Local SHA-256 manifest plus targeted text extraction from the user-supplied PDFs; no PDF copied to Git or VM.",
+  "overall_status": "source_checked_human_review_required",
+  "rules": [
+    {
+      "rule_id": "AS4777-3.3.4.2-INCREASE",
+      "status": "source_value_matched",
+      "evidence": "Clause 3.3.4.2 states the 16.67 percent rated-power-per-minute default and inclusive adjustable range 5 to 100 percent."
+    },
+    {
+      "rule_id": "AS4777-3.3.4.2-DECREASE",
+      "status": "source_value_matched",
+      "evidence": "Clause 3.3.4.2 applies the same default to increase and decrease and permits separate rate limits."
+    },
+    {
+      "rule_id": "AS4777-3.3.2.2-A-VW1",
+      "status": "source_value_matched",
+      "evidence": "Table 3.6 lists Australia A VW1 as 253 V."
+    },
+    {
+      "rule_id": "AS4777-3.3.2.3-A-VV1",
+      "status": "source_value_matched",
+      "evidence": "Table 3.7 lists Australia A VV1 as 207 V."
+    },
+    {
+      "rule_id": "AS4777-4.7-A-FURF",
+      "status": "source_value_matched_with_modeling_caveat",
+      "evidence": "Amendment 2 Table 4.10 lists Australia A fURF as 50.15 Hz.",
+      "discrepancy": "The JSON field expected.default models the table value as a default, while Table 4.10 presents it as the upper connection and reconnection frequency. Rule data was not silently changed."
+    },
+    {
+      "rule_id": "AS4777-4.5.4-VOLTAGE-DISTURBANCE",
+      "status": "source_requirement_matched_with_modeling_caveat",
+      "evidence": "Clause 4.5.4 and Table 4.8 define voltage-disturbance behavior and require compliance determination by type testing.",
+      "discrepancy": "The JSON unit 'type-test evidence' is an internal evidence-model abstraction, not a physical unit stated by the Standard. Rule data was not silently changed."
+    }
+  ],
+  "coverage_limit": "This is a six-rule demonstration. It is not a complete transcription of AS/NZS 4777.2 and cannot support certification."
+}
+

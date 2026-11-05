@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "assess_inverter_configuration.output.schema.json",
+  "title": "assess_inverter_configuration output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["dataset_id", "synthetic", "region", "interface", "inverter_metadata", "counts", "results"],
+  "properties": {
+    "dataset_id": {"type": "string"},
+    "synthetic": {"const": true},
+    "region": {"type": "string"},
+    "interface": {"type": "string"},
+    "inverter_metadata": {"type": "object"},
+    "counts": {
+      "type": "object",
+      "additionalProperties": {"type": "integer", "minimum": 0}
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "rule_id", "clause", "parameter", "status", "classification",
+          "observed_value", "observed_unit", "expected", "constraint", "message",
+          "source_reference", "review_status", "evidence"
+        ],
+        "properties": {
+          "rule_id": {"type": "string"},
+          "clause": {"type": "string"},
+          "parameter": {"type": "string"},
+          "status": {"$ref": "#/$defs/classification"},
+          "classification": {"$ref": "#/$defs/classification"},
+          "observed_value": {},
+          "observed_unit": {"type": "string"},
+          "expected": {"type": "object"},
+          "constraint": {"type": "object"},
+          "message": {"type": "string"},
+          "source_reference": {"type": "object"},
+          "review_status": {"const": "source_checked_human_review_required"},
+          "evidence": {"type": "object"}
+        }
+      }
+    }
+  },
+  "$defs": {
+    "classification": {
+      "enum": [
+        "compliant",
+        "deviation_from_default",
+        "outside_permitted_range",
+        "not_observed",
+        "not_assessable_from_app_settings",
+        "compliant_with_approved_variation",
+        "approval_not_verified",
+        "unknown_regional_configuration"
+      ]
+    }
+  }
+}

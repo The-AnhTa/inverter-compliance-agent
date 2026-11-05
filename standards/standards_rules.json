@@ -1,0 +1,292 @@
+{
+  "metadata": {
+    "title": "Initial source-checked AS/NZS 4777.2 rule set",
+    "standard": "AS/NZS 4777.2:2020 including Amendment 1:2021 and Amendment 2:2024",
+    "known_regions": ["Australia A", "Australia B", "Australia C", "New Zealand"],
+    "prepared_from_user_supplied_pdfs": true,
+    "review_status": "source_checked_human_review_required",
+    "notice": "No rule in this automatically prepared set is validated for operational use."
+  },
+  "rules": [
+    {
+      "rule_id": "AS4777-3.3.4.2-INCREASE",
+      "clause": "3.3.4.2",
+      "parameter": "power_rate_limit_gradient_increase",
+      "unit": "% rated power/min",
+      "applicability": "Inverters with adjustable active-power rate limiting; increase direction.",
+      "relevant_regions": ["Australia A", "Australia B", "Australia C", "New Zealand"],
+      "expected": {"default": 16.67},
+      "constraint": {"type": "range", "minimum": 5, "maximum": 100, "inclusive": true},
+      "source_reference": {
+        "standard": "AS/NZS 4777.2:2020 including Amd 1:2021 and Amd 2:2024",
+        "clause": "3.3.4.2",
+        "local_source": "ASNZS 4777.2.2020.pdf"
+      },
+      "review_status": "source_checked_human_review_required",
+      "assessment_method": "app_setting"
+    },
+    {
+      "rule_id": "AS4777-3.3.4.2-DECREASE",
+      "clause": "3.3.4.2",
+      "parameter": "power_rate_limit_gradient_decrease",
+      "unit": "% rated power/min",
+      "applicability": "Inverters with adjustable active-power rate limiting; decrease direction when separately configurable.",
+      "relevant_regions": ["Australia A", "Australia B", "Australia C", "New Zealand"],
+      "expected": {"default": 16.67},
+      "constraint": {"type": "range", "minimum": 5, "maximum": 100, "inclusive": true},
+      "source_reference": {
+        "standard": "AS/NZS 4777.2:2020 including Amd 1:2021 and Amd 2:2024",
+        "clause": "3.3.4.2",
+        "local_source": "ASNZS 4777.2.2020.pdf"
+      },
+      "review_status": "source_checked_human_review_required",
+      "assessment_method": "app_setting"
+    },
+    {
+      "rule_id": "AS4777-3.3.2.2-A-VW1",
+      "clause": "3.3.2.2 / Table 3.6",
+      "parameter": "volt_watt_vw1",
+      "unit": "V",
+      "applicability": "Volt-watt response mode for an inverter configured for Australia A.",
+      "relevant_regions": ["Australia A"],
+      "expected": {"default": 253},
+      "constraint": {"type": "range", "minimum": 235, "maximum": 255, "inclusive": true},
+      "source_reference": {
+        "standard": "AS/NZS 4777.2:2020 including Amd 1:2021 and Amd 2:2024",
+        "clause": "3.3.2.2",
+        "table": "3.6",
+        "local_source": "ASNZS 4777.2.2020.pdf"
+      },
+      "review_status": "source_checked_human_review_required",
+      "assessment_method": "app_setting"
+    },
+    {
+      "rule_id": "AS4777-3.3.2.2-A-VW2",
+      "clause": "3.3.2.2 / Table 3.6",
+      "parameter": "volt_watt_vw2",
+      "unit": "V",
+      "applicability": "Volt-watt response mode for an inverter configured for Australia A.",
+      "relevant_regions": ["Australia A"],
+      "expected": {"default": 260},
+      "constraint": {"type": "range", "minimum": 240, "maximum": 265, "inclusive": true},
+      "source_reference": {"standard": "AS/NZS 4777.2:2020 including Amd 1:2021 and Amd 2:2024", "clause": "3.3.2.2", "table": "3.6", "local_source": "ASNZS 4777.2.2020.pdf"},
+      "review_status": "source_checked_human_review_required",
+      "assessment_method": "app_setting"
+    },
+    {
+      "rule_id": "AS4777-3.3.2.2-B-VW1",
+      "clause": "3.3.2.2 / Table 3.6",
+      "parameter": "volt_watt_vw1",
+      "unit": "V",
+      "applicability": "Volt-watt response mode for an inverter configured for Australia B.",
+      "relevant_regions": ["Australia B"],
+      "expected": {"default": 250},
+      "constraint": {"type": "range", "minimum": 235, "maximum": 255, "inclusive": true},
+      "source_reference": {"standard": "AS/NZS 4777.2:2020 including Amd 1:2021 and Amd 2:2024", "clause": "3.3.2.2", "table": "3.6", "local_source": "ASNZS 4777.2.2020.pdf"},
+      "review_status": "source_checked_human_review_required",
+      "assessment_method": "app_setting"
+    },
+    {
+      "rule_id": "AS4777-3.3.2.2-B-VW2",
+      "clause": "3.3.2.2 / Table 3.6",
+      "parameter": "volt_watt_vw2",
+      "unit": "V",
+      "applicability": "Volt-watt response mode for an inverter configured for Australia B.",
+      "relevant_regions": ["Australia B"],
+      "expected": {"default": 260},
+      "constraint": {"type": "range", "minimum": 240, "maximum": 265, "inclusive": true},
+      "source_reference": {"standard": "AS/NZS 4777.2:2020 including Amd 1:2021 and Amd 2:2024", "clause": "3.3.2.2", "table": "3.6", "local_source": "ASNZS 4777.2.2020.pdf"},
+      "review_status": "source_checked_human_review_required",
+      "assessment_method": "app_setting"
+    },
+    {
+      "rule_id": "AS4777-3.3.2.2-C-VW1",
+      "clause": "3.3.2.2 / Table 3.6",
+      "parameter": "volt_watt_vw1",
+      "unit": "V",
+      "applicability": "Volt-watt response mode for an inverter configured for Australia C.",
+      "relevant_regions": ["Australia C"],
+      "expected": {"default": 253},
+      "constraint": {"type": "range", "minimum": 235, "maximum": 255, "inclusive": true},
+      "source_reference": {"standard": "AS/NZS 4777.2:2020 including Amd 1:2021 and Amd 2:2024", "clause": "3.3.2.2", "table": "3.6", "local_source": "ASNZS 4777.2.2020.pdf"},
+      "review_status": "source_checked_human_review_required",
+      "assessment_method": "app_setting"
+    },
+    {
+      "rule_id": "AS4777-3.3.2.2-C-VW2",
+      "clause": "3.3.2.2 / Table 3.6",
+      "parameter": "volt_watt_vw2",
+      "unit": "V",
+      "applicability": "Volt-watt response mode for an inverter configured for Australia C.",
+      "relevant_regions": ["Australia C"],
+      "expected": {"default": 260},
+      "constraint": {"type": "range", "minimum": 240, "maximum": 265, "inclusive": true},
+      "source_reference": {"standard": "AS/NZS 4777.2:2020 including Amd 1:2021 and Amd 2:2024", "clause": "3.3.2.2", "table": "3.6", "local_source": "ASNZS 4777.2.2020.pdf"},
+      "review_status": "source_checked_human_review_required",
+      "assessment_method": "app_setting"
+    },
+    {
+      "rule_id": "AS4777-3.3.2.2-NZ-VW1",
+      "clause": "3.3.2.2 / Table 3.6",
+      "parameter": "volt_watt_vw1",
+      "unit": "V",
+      "applicability": "Volt-watt response mode for an inverter configured for New Zealand.",
+      "relevant_regions": ["New Zealand"],
+      "expected": {"default": 242},
+      "constraint": {"type": "range", "minimum": 235, "maximum": 255, "inclusive": true},
+      "source_reference": {"standard": "AS/NZS 4777.2:2020 including Amd 1:2021 and Amd 2:2024", "clause": "3.3.2.2", "table": "3.6", "local_source": "ASNZS 4777.2.2020.pdf"},
+      "review_status": "source_checked_human_review_required",
+      "assessment_method": "app_setting"
+    },
+    {
+      "rule_id": "AS4777-3.3.2.2-NZ-VW2",
+      "clause": "3.3.2.2 / Table 3.6",
+      "parameter": "volt_watt_vw2",
+      "unit": "V",
+      "applicability": "Volt-watt response mode for an inverter configured for New Zealand.",
+      "relevant_regions": ["New Zealand"],
+      "expected": {"default": 250},
+      "constraint": {"type": "range", "minimum": 240, "maximum": 265, "inclusive": true},
+      "source_reference": {"standard": "AS/NZS 4777.2:2020 including Amd 1:2021 and Amd 2:2024", "clause": "3.3.2.2", "table": "3.6", "local_source": "ASNZS 4777.2.2020.pdf"},
+      "review_status": "source_checked_human_review_required",
+      "assessment_method": "app_setting"
+    },
+    {
+      "rule_id": "AS4777-3.3.2.3-A-VV1",
+      "clause": "3.3.2.3 / Table 3.7",
+      "parameter": "volt_var_vv1",
+      "unit": "V",
+      "applicability": "Volt-var response mode for an inverter configured for Australia A.",
+      "relevant_regions": ["Australia A"],
+      "expected": {"default": 207},
+      "constraint": {"type": "range", "minimum": 180, "maximum": 230, "inclusive": true},
+      "source_reference": {
+        "standard": "AS/NZS 4777.2:2020 including Amd 1:2021 and Amd 2:2024",
+        "clause": "3.3.2.3",
+        "table": "3.7",
+        "local_source": "ASNZS 4777.2.2020.pdf"
+      },
+      "review_status": "source_checked_human_review_required",
+      "assessment_method": "app_setting"
+    },
+    {
+      "rule_id": "AS4777-3.3.2.3-A-VV2",
+      "clause": "3.3.2.3 / Table 3.7",
+      "parameter": "volt_var_vv2",
+      "unit": "V",
+      "applicability": "Volt-var response mode for an inverter configured for Australia A.",
+      "relevant_regions": ["Australia A"],
+      "expected": {"default": 220},
+      "constraint": {"type": "range", "minimum": 180, "maximum": 230, "inclusive": true},
+      "source_reference": {"standard": "AS/NZS 4777.2:2020 including Amd 1:2021 and Amd 2:2024", "clause": "3.3.2.3", "table": "3.7", "local_source": "ASNZS 4777.2.2020.pdf"},
+      "review_status": "source_checked_human_review_required",
+      "assessment_method": "app_setting"
+    },
+    {
+      "rule_id": "AS4777-3.3.2.3-A-VV3",
+      "clause": "3.3.2.3 / Table 3.7",
+      "parameter": "volt_var_vv3",
+      "unit": "V",
+      "applicability": "Volt-var response mode for an inverter configured for Australia A.",
+      "relevant_regions": ["Australia A"],
+      "expected": {"default": 240},
+      "constraint": {"type": "range", "minimum": 230, "maximum": 265, "inclusive": true},
+      "source_reference": {"standard": "AS/NZS 4777.2:2020 including Amd 1:2021 and Amd 2:2024", "clause": "3.3.2.3", "table": "3.7", "local_source": "ASNZS 4777.2.2020.pdf"},
+      "review_status": "source_checked_human_review_required",
+      "assessment_method": "app_setting"
+    },
+    {
+      "rule_id": "AS4777-3.3.2.3-A-VV4",
+      "clause": "3.3.2.3 / Table 3.7",
+      "parameter": "volt_var_vv4",
+      "unit": "V",
+      "applicability": "Volt-var response mode for an inverter configured for Australia A.",
+      "relevant_regions": ["Australia A"],
+      "expected": {"default": 258},
+      "constraint": {"type": "range", "minimum": 230, "maximum": 265, "inclusive": true},
+      "source_reference": {"standard": "AS/NZS 4777.2:2020 including Amd 1:2021 and Amd 2:2024", "clause": "3.3.2.3", "table": "3.7", "local_source": "ASNZS 4777.2.2020.pdf"},
+      "review_status": "source_checked_human_review_required",
+      "assessment_method": "app_setting"
+    },
+    {
+      "rule_id": "AS4777-4.7-A-FURF",
+      "clause": "4.7 / Table 4.10",
+      "parameter": "upper_connection_reconnection_frequency",
+      "unit": "Hz",
+      "applicability": "Connection and reconnection procedure for Australia A.",
+      "relevant_regions": ["Australia A"],
+      "expected": {"default": 50.15},
+      "constraint": {"type": "source_value"},
+      "source_reference": {
+        "standard": "AS/NZS 4777.2:2020 including Amd 1:2021 and Amd 2:2024",
+        "clause": "4.7",
+        "table": "4.10",
+        "local_source": "ASNZS 4777.2.2020-2024.pdf"
+      },
+      "review_status": "source_checked_human_review_required",
+      "assessment_method": "app_setting",
+      "modeling_caveat": "Table 4.10 presents 50.15 Hz as the upper connection and reconnection frequency; the current data model stores that published value under expected.default."
+    },
+    {
+      "rule_id": "AS4777-4.7-B-FURF",
+      "clause": "4.7 / Table 4.10",
+      "parameter": "upper_connection_reconnection_frequency",
+      "unit": "Hz",
+      "applicability": "Connection and reconnection procedure for Australia B.",
+      "relevant_regions": ["Australia B"],
+      "expected": {"default": 50.15},
+      "constraint": {"type": "source_value"},
+      "source_reference": {"standard": "AS/NZS 4777.2:2020 including Amd 1:2021 and Amd 2:2024", "clause": "4.7", "table": "4.10", "local_source": "ASNZS 4777.2.2020-2024.pdf"},
+      "review_status": "source_checked_human_review_required",
+      "assessment_method": "app_setting",
+      "modeling_caveat": "Table 4.10 presents fURF; the data model stores the published value under expected.default."
+    },
+    {
+      "rule_id": "AS4777-4.7-C-FURF",
+      "clause": "4.7 / Table 4.10",
+      "parameter": "upper_connection_reconnection_frequency",
+      "unit": "Hz",
+      "applicability": "Connection and reconnection procedure for Australia C.",
+      "relevant_regions": ["Australia C"],
+      "expected": {"default": 50.50},
+      "constraint": {"type": "source_value"},
+      "source_reference": {"standard": "AS/NZS 4777.2:2020 including Amd 1:2021 and Amd 2:2024", "clause": "4.7", "table": "4.10", "local_source": "ASNZS 4777.2.2020-2024.pdf"},
+      "review_status": "source_checked_human_review_required",
+      "assessment_method": "app_setting",
+      "modeling_caveat": "Table 4.10 presents fURF; the data model stores the published value under expected.default."
+    },
+    {
+      "rule_id": "AS4777-4.7-NZ-FURF",
+      "clause": "4.7 / Table 4.10",
+      "parameter": "upper_connection_reconnection_frequency",
+      "unit": "Hz",
+      "applicability": "Connection and reconnection procedure for New Zealand.",
+      "relevant_regions": ["New Zealand"],
+      "expected": {"default": 50.15},
+      "constraint": {"type": "source_value"},
+      "source_reference": {"standard": "AS/NZS 4777.2:2020 including Amd 1:2021 and Amd 2:2024", "clause": "4.7", "table": "4.10", "local_source": "ASNZS 4777.2.2020-2024.pdf"},
+      "review_status": "source_checked_human_review_required",
+      "assessment_method": "app_setting",
+      "modeling_caveat": "Table 4.10 presents fURF; the data model stores the published value under expected.default."
+    },
+    {
+      "rule_id": "AS4777-4.5.4-VOLTAGE-DISTURBANCE",
+      "clause": "4.5.4 / Table 4.8",
+      "parameter": "voltage_disturbance_response",
+      "unit": "type-test evidence",
+      "applicability": "Inverter voltage disturbance response behavior.",
+      "relevant_regions": ["Australia A", "Australia B", "Australia C", "New Zealand"],
+      "expected": {"evidence": "conforming type-test result"},
+      "constraint": {"type": "behavioral_requirement"},
+      "source_reference": {
+        "standard": "AS/NZS 4777.2:2020 including Amd 1:2021 and Amd 2:2024",
+        "clause": "4.5.4",
+        "table": "4.8",
+        "local_source": "ASNZS 4777.2.2020.pdf"
+      },
+      "review_status": "source_checked_human_review_required",
+      "assessment_method": "type_test",
+      "modeling_caveat": "The unit 'type-test evidence' is an internal evidence-model abstraction, not a physical unit stated by the Standard."
+    }
+  ]
+}

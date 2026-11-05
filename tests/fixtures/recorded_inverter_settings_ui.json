@@ -1,0 +1,17 @@
+{
+  "package": "com.example.syntheticinverter",
+  "page": "grid-settings",
+  "captured_at": "2026-10-30T00:00:00Z",
+  "evidence_ref": "SYNTHETIC-recorded-inverter-settings-ui.json",
+  "synthetic": true,
+  "metadata": {"synthetic": true},
+  "ui_text": [
+    {"text": "VW1 253 V", "content_description": "", "resource_id": "vw1"},
+    {"text": "VW2 260 V", "content_description": "", "resource_id": "vw2"},
+    {"text": "VV1 207 V", "content_description": "", "resource_id": "vv1"},
+    {"text": "VV2 220 V", "content_description": "", "resource_id": "vv2"},
+    {"text": "VV3 240 V", "content_description": "", "resource_id": "vv3"},
+    {"text": "VV4 258 V", "content_description": "", "resource_id": "vv4"},
+    {"text": "fURF 50.15 Hz", "content_description": "", "resource_id": "furf"}
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "metadata": {
+    "synthetic_demo_only": true,
+    "description": "Fixed trusted evidence registry for deterministic Task E tests. It is not real distributor approval."
+  },
+  "records": [
+    {
+      "evidence_id": "SYNTHETIC-EVIDENCE-AU-A-VV1-210",
+      "parameter": "volt_var_vv1",
+      "region": "Australia A",
+      "approved_value": 210,
+      "approval_reference": "SYNTHETIC-DISTRIBUTOR-APPROVAL-001",
+      "evidence_verified": true
+    }
+  ]
+}

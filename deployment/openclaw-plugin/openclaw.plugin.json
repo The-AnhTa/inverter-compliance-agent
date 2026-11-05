@@ -1,0 +1,23 @@
+{
+  "id": "inverter-compliance-tool",
+  "name": "Inverter Compliance Tool",
+  "description": "Run the fixed synthetic-only deterministic inverter configuration assessment.",
+  "version": "0.1.0",
+  "enabledByDefault": false,
+  "activation": {
+    "onStartup": true
+  },
+  "contracts": {
+    "tools": ["assess_inverter_configuration"]
+  },
+  "toolMetadata": {
+    "assess_inverter_configuration": {
+      "optional": true
+    }
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  }
+}

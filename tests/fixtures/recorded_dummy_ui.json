@@ -1,0 +1,12 @@
+{
+  "package": "com.example.dummyswitch",
+  "page": "initial",
+  "captured_at": "2026-10-30T00:00:00Z",
+  "evidence_ref": "SYNTHETIC-recorded-dummy-ui.json",
+  "synthetic": true,
+  "metadata": {"synthetic": true},
+  "ui_text": [
+    {"text": "Dummy Switch", "content_description": "", "resource_id": "title"},
+    {"text": "State: OFF", "content_description": "", "resource_id": "state_indicator"}
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "assess_inverter_configuration.input.schema.json",
+  "title": "assess_inverter_configuration input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["assessment_mode", "metadata", "regional_profile", "observations"],
+  "properties": {
+    "assessment_mode": {
+      "const": "synthetic",
+      "description": "Only synthetic assessments are enabled in Task E."
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["dataset_id"],
+      "properties": {
+        "dataset_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64,
+          "pattern": "^SYNTHETIC-[A-Za-z0-9._-]+$"
+        },
+        "interface": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 96,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9 ._()+%-]*$"
+        }
+      }
+    },
+    "inverter": {
+      "type": "object",
+      "additionalProperties": false,
+      "maxProperties": 4,
+      "properties": {
+        "manufacturer": {"$ref": "#/$defs/safeLabel"},
+        "model": {"$ref": "#/$defs/safeLabel"},
+        "firmware_version": {"$ref": "#/$defs/safeLabel"},
+        "nominal_power_kw": {"type": "number", "minimum": 0, "maximum": 1000000}
+      }
+    },
+    "regional_profile": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9 ._()+%-]*$"
+    },
+    "observations": {
+      "type": "array",
+      "maxItems": 32,
+      "items": {"$ref": "#/$defs/observation"}
+    }
+  },
+  "$defs": {
+    "safeLabel": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9 ._()+%-]*$"
+    },
+    "safeReference": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+    },
+    "observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["parameter", "value", "unit", "availability"],
+      "properties": {
+        "parameter": {
+          "enum": [
+            "power_rate_limit_gradient_increase",
+            "power_rate_limit_gradient_decrease",
+            "volt_watt_vw1",
+            "volt_var_vv1",
+            "upper_connection_reconnection_frequency",
+            "voltage_disturbance_response"
+          ]
+        },
+        "value": {
+          "oneOf": [
+            {"type": "number"},
+            {"type": "boolean"},
+            {"type": "null"},
+            {
+              "type": "string",
+              "maxLength": 128,
+              "pattern": "^[A-Za-z0-9 ._()+:%-]*$"
+            }
+          ]
+        },
+        "unit": {
+          "type": "string",
+          "maxLength": 48,
+          "pattern": "^[A-Za-z0-9 %._()+/-]*$"
+        },
+        "availability": {
+          "enum": ["available", "unavailable_through_inspected_interface", "not_supplied"]
+        },
+        "source_interface": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 96,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9 ._()+%-]*$"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": false,
+          "maxProperties": 3,
+          "properties": {
+            "approved_override": {"type": "boolean"},
+            "approval_reference": {"$ref": "#/$defs/safeReference"},
+            "approval_evidence_id": {"$ref": "#/$defs/safeReference"}
+          }
+        }
+      }
+    }
+  }
+}

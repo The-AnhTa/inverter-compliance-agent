@@ -1,0 +1,296 @@
+{
+  "dataset_id": "SYNTHETIC-DEMO-A-001",
+  "synthetic": true,
+  "region": "Australia A",
+  "interface": "synthetic inverter settings app",
+  "inverter_metadata": {},
+  "counts": {
+    "compliant": 1,
+    "outside_permitted_range": 1,
+    "deviation_from_default": 1,
+    "not_observed": 5,
+    "compliant_with_approved_variation": 1,
+    "not_assessable_from_app_settings": 1
+  },
+  "results": [
+    {
+      "rule_id": "AS4777-3.3.4.2-INCREASE",
+      "clause": "3.3.4.2",
+      "parameter": "power_rate_limit_gradient_increase",
+      "status": "compliant",
+      "observed_value": 16.67,
+      "observed_unit": "% rated power/min",
+      "expected": {
+        "default": 16.67
+      },
+      "constraint": {
+        "type": "range",
+        "minimum": 5,
+        "maximum": 100,
+        "inclusive": true
+      },
+      "message": "Observed value matches the standards default.",
+      "source_reference": {
+        "standard": "AS/NZS 4777.2:2020 including Amd 1:2021 and Amd 2:2024",
+        "clause": "3.3.4.2",
+        "local_source": "ASNZS 4777.2.2020.pdf"
+      },
+      "review_status": "source_checked_human_review_required",
+      "evidence": {},
+      "classification": "compliant"
+    },
+    {
+      "rule_id": "AS4777-3.3.4.2-DECREASE",
+      "clause": "3.3.4.2",
+      "parameter": "power_rate_limit_gradient_decrease",
+      "status": "outside_permitted_range",
+      "observed_value": 2,
+      "observed_unit": "% rated power/min",
+      "expected": {
+        "default": 16.67
+      },
+      "constraint": {
+        "type": "range",
+        "minimum": 5,
+        "maximum": 100,
+        "inclusive": true
+      },
+      "message": "Observed value is outside the permitted inclusive range 5 to 100 % rated power/min.",
+      "source_reference": {
+        "standard": "AS/NZS 4777.2:2020 including Amd 1:2021 and Amd 2:2024",
+        "clause": "3.3.4.2",
+        "local_source": "ASNZS 4777.2.2020.pdf"
+      },
+      "review_status": "source_checked_human_review_required",
+      "evidence": {},
+      "classification": "outside_permitted_range"
+    },
+    {
+      "rule_id": "AS4777-3.3.2.2-A-VW1",
+      "clause": "3.3.2.2 / Table 3.6",
+      "parameter": "volt_watt_vw1",
+      "status": "deviation_from_default",
+      "observed_value": 250,
+      "observed_unit": "V",
+      "expected": {
+        "default": 253
+      },
+      "constraint": {
+        "type": "range",
+        "minimum": 235,
+        "maximum": 255,
+        "inclusive": true
+      },
+      "message": "Observed value is within any stated constraint but differs from the standards default; approval evidence was not supplied.",
+      "source_reference": {
+        "standard": "AS/NZS 4777.2:2020 including Amd 1:2021 and Amd 2:2024",
+        "clause": "3.3.2.2",
+        "table": "3.6",
+        "local_source": "ASNZS 4777.2.2020.pdf"
+      },
+      "review_status": "source_checked_human_review_required",
+      "evidence": {},
+      "classification": "deviation_from_default"
+    },
+    {
+      "rule_id": "AS4777-3.3.2.2-A-VW2",
+      "clause": "3.3.2.2 / Table 3.6",
+      "parameter": "volt_watt_vw2",
+      "status": "not_observed",
+      "observed_value": null,
+      "observed_unit": "V",
+      "expected": {
+        "default": 260
+      },
+      "constraint": {
+        "type": "range",
+        "minimum": 240,
+        "maximum": 265,
+        "inclusive": true
+      },
+      "message": "The parameter was unavailable through the inspected interface; capability absence is not inferred.",
+      "source_reference": {
+        "standard": "AS/NZS 4777.2:2020 including Amd 1:2021 and Amd 2:2024",
+        "clause": "3.3.2.2",
+        "table": "3.6",
+        "local_source": "ASNZS 4777.2.2020.pdf"
+      },
+      "review_status": "source_checked_human_review_required",
+      "evidence": {
+        "availability": "not_supplied"
+      },
+      "classification": "not_observed"
+    },
+    {
+      "rule_id": "AS4777-3.3.2.3-A-VV1",
+      "clause": "3.3.2.3 / Table 3.7",
+      "parameter": "volt_var_vv1",
+      "status": "compliant_with_approved_variation",
+      "observed_value": 210,
+      "observed_unit": "V",
+      "expected": {
+        "default": 207
+      },
+      "constraint": {
+        "type": "range",
+        "minimum": 180,
+        "maximum": 230,
+        "inclusive": true
+      },
+      "message": "Observed value differs from the published value and matches verified approved-variation evidence.",
+      "source_reference": {
+        "standard": "AS/NZS 4777.2:2020 including Amd 1:2021 and Amd 2:2024",
+        "clause": "3.3.2.3",
+        "table": "3.7",
+        "local_source": "ASNZS 4777.2.2020.pdf"
+      },
+      "review_status": "source_checked_human_review_required",
+      "evidence": {
+        "approval_reference": "SYNTHETIC-DISTRIBUTOR-APPROVAL-001",
+        "evidence_id": "SYNTHETIC-EVIDENCE-AU-A-VV1-210",
+        "approval_verified": true
+      },
+      "classification": "compliant_with_approved_variation"
+    },
+    {
+      "rule_id": "AS4777-3.3.2.3-A-VV2",
+      "clause": "3.3.2.3 / Table 3.7",
+      "parameter": "volt_var_vv2",
+      "status": "not_observed",
+      "observed_value": null,
+      "observed_unit": "V",
+      "expected": {
+        "default": 220
+      },
+      "constraint": {
+        "type": "range",
+        "minimum": 180,
+        "maximum": 230,
+        "inclusive": true
+      },
+      "message": "The parameter was unavailable through the inspected interface; capability absence is not inferred.",
+      "source_reference": {
+        "standard": "AS/NZS 4777.2:2020 including Amd 1:2021 and Amd 2:2024",
+        "clause": "3.3.2.3",
+        "table": "3.7",
+        "local_source": "ASNZS 4777.2.2020.pdf"
+      },
+      "review_status": "source_checked_human_review_required",
+      "evidence": {
+        "availability": "not_supplied"
+      },
+      "classification": "not_observed"
+    },
+    {
+      "rule_id": "AS4777-3.3.2.3-A-VV3",
+      "clause": "3.3.2.3 / Table 3.7",
+      "parameter": "volt_var_vv3",
+      "status": "not_observed",
+      "observed_value": null,
+      "observed_unit": "V",
+      "expected": {
+        "default": 240
+      },
+      "constraint": {
+        "type": "range",
+        "minimum": 230,
+        "maximum": 265,
+        "inclusive": true
+      },
+      "message": "The parameter was unavailable through the inspected interface; capability absence is not inferred.",
+      "source_reference": {
+        "standard": "AS/NZS 4777.2:2020 including Amd 1:2021 and Amd 2:2024",
+        "clause": "3.3.2.3",
+        "table": "3.7",
+        "local_source": "ASNZS 4777.2.2020.pdf"
+      },
+      "review_status": "source_checked_human_review_required",
+      "evidence": {
+        "availability": "not_supplied"
+      },
+      "classification": "not_observed"
+    },
+    {
+      "rule_id": "AS4777-3.3.2.3-A-VV4",
+      "clause": "3.3.2.3 / Table 3.7",
+      "parameter": "volt_var_vv4",
+      "status": "not_observed",
+      "observed_value": null,
+      "observed_unit": "V",
+      "expected": {
+        "default": 258
+      },
+      "constraint": {
+        "type": "range",
+        "minimum": 230,
+        "maximum": 265,
+        "inclusive": true
+      },
+      "message": "The parameter was unavailable through the inspected interface; capability absence is not inferred.",
+      "source_reference": {
+        "standard": "AS/NZS 4777.2:2020 including Amd 1:2021 and Amd 2:2024",
+        "clause": "3.3.2.3",
+        "table": "3.7",
+        "local_source": "ASNZS 4777.2.2020.pdf"
+      },
+      "review_status": "source_checked_human_review_required",
+      "evidence": {
+        "availability": "not_supplied"
+      },
+      "classification": "not_observed"
+    },
+    {
+      "rule_id": "AS4777-4.7-A-FURF",
+      "clause": "4.7 / Table 4.10",
+      "parameter": "upper_connection_reconnection_frequency",
+      "status": "not_observed",
+      "observed_value": null,
+      "observed_unit": "Hz",
+      "expected": {
+        "default": 50.15
+      },
+      "constraint": {
+        "type": "source_value"
+      },
+      "message": "The parameter was unavailable through the inspected interface; capability absence is not inferred.",
+      "source_reference": {
+        "standard": "AS/NZS 4777.2:2020 including Amd 1:2021 and Amd 2:2024",
+        "clause": "4.7",
+        "table": "4.10",
+        "local_source": "ASNZS 4777.2.2020-2024.pdf"
+      },
+      "review_status": "source_checked_human_review_required",
+      "evidence": {
+        "availability": "unavailable_through_inspected_interface",
+        "modeling_caveat": "Table 4.10 presents 50.15 Hz as the upper connection and reconnection frequency; the current data model stores that published value under expected.default."
+      },
+      "classification": "not_observed"
+    },
+    {
+      "rule_id": "AS4777-4.5.4-VOLTAGE-DISTURBANCE",
+      "clause": "4.5.4 / Table 4.8",
+      "parameter": "voltage_disturbance_response",
+      "status": "not_assessable_from_app_settings",
+      "observed_value": null,
+      "observed_unit": "type-test evidence",
+      "expected": {
+        "evidence": "conforming type-test result"
+      },
+      "constraint": {
+        "type": "behavioral_requirement"
+      },
+      "message": "This requirement needs evidence beyond app settings (for example, type-test evidence).",
+      "source_reference": {
+        "standard": "AS/NZS 4777.2:2020 including Amd 1:2021 and Amd 2:2024",
+        "clause": "4.5.4",
+        "table": "4.8",
+        "local_source": "ASNZS 4777.2.2020.pdf"
+      },
+      "review_status": "source_checked_human_review_required",
+      "evidence": {
+        "modeling_caveat": "The unit 'type-test evidence' is an internal evidence-model abstraction, not a physical unit stated by the Standard."
+      },
+      "classification": "not_assessable_from_app_settings"
+    }
+  ]
+}

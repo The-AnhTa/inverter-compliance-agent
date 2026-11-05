@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+reports/generated/
+output/
+artifacts/
+sems-portal-tree.txt
+sems-screen.png
+sems-ui.xml
+standards/source_pdfs/
+*.pdf

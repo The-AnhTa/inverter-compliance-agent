@@ -1,0 +1,11 @@
+{
+  "metadata": {
+    "dataset_id": "SYNTHETIC-UNKNOWN-REGION-001",
+    "synthetic": true,
+    "region": "Synthetic Region X",
+    "interface": "synthetic inverter settings app"
+  },
+  "observations": [],
+  "approved_variations": []
+}
+

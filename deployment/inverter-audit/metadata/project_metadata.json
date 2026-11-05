@@ -1,0 +1,26 @@
+{
+  "project": "inverter-compliance-agent",
+  "agent_id": "inverter-audit",
+  "stage": "Task E offline integration complete; live activation rolled back",
+  "prepared_on": "2026-10-29",
+  "synthetic_only": true,
+  "standards_rule_status": "source_checked_human_review_required",
+  "licensed_pdfs_in_bundle": false,
+  "android_connection_configured": false,
+  "mobilerun_connection_configured": false,
+  "real_inverter_connected": false,
+  "real_inverter_assessed": false,
+  "controlled_engine_tool_connected": false,
+  "controlled_engine_tool_name": "assess_inverter_configuration",
+  "plugin_installed_on_vm": true,
+  "plugin_enabled": false,
+  "activation_status": "blocked_non_disruptive_reload_timed_out_then_gateway_recovered_after_rollback",
+  "final_gateway_health": "healthy_without_restart",
+  "permitted_agent_tool": "read",
+  "notes": [
+    "The fixed Python runner and plugin passed offline tests, but the agent cannot invoke the tool because live activation was rolled back.",
+    "A successful future activation must verify an effective tool set of exactly read and assess_inverter_configuration.",
+    "An unavailable interface field must not be interpreted as missing inverter capability.",
+    "No certification conclusion is supported by this demonstration."
+  ]
+}

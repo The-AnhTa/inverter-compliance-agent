@@ -1,0 +1,54 @@
+{
+  "assessment_mode": "synthetic",
+  "metadata": {
+    "dataset_id": "SYNTHETIC-TASK-E-E2E-001",
+    "interface": "synthetic normalized observations"
+  },
+  "inverter": {
+    "manufacturer": "Synthetic Manufacturer",
+    "model": "Synthetic Model A",
+    "firmware_version": "SYNTHETIC-1.0",
+    "nominal_power_kw": 5
+  },
+  "regional_profile": "Australia A",
+  "observations": [
+    {
+      "parameter": "power_rate_limit_gradient_increase",
+      "value": 16.67,
+      "unit": "% rated power/min",
+      "availability": "available",
+      "source_interface": "synthetic app field"
+    },
+    {
+      "parameter": "power_rate_limit_gradient_decrease",
+      "value": 10,
+      "unit": "% rated power/min",
+      "availability": "available",
+      "source_interface": "synthetic app field"
+    },
+    {
+      "parameter": "volt_watt_vw1",
+      "value": 253,
+      "unit": "V",
+      "availability": "available",
+      "source_interface": "synthetic app field"
+    },
+    {
+      "parameter": "volt_var_vv1",
+      "value": 210,
+      "unit": "V",
+      "availability": "available",
+      "source_interface": "synthetic app field",
+      "metadata": {
+        "approval_evidence_id": "SYNTHETIC-EVIDENCE-AU-A-VV1-210"
+      }
+    },
+    {
+      "parameter": "upper_connection_reconnection_frequency",
+      "value": null,
+      "unit": "Hz",
+      "availability": "unavailable_through_inspected_interface",
+      "source_interface": "synthetic app inventory"
+    }
+  ]
+}
